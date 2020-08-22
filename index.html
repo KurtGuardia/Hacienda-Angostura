@@ -8,6 +8,46 @@
   </head>
   <body>
     <header>
+      <div class="navigation">
+        <input type="checkbox" class="navigation__checkbox" id="navi-toggle" />
+
+        <label for="navi-toggle" class="navigation__button">
+          <span class="navigation__icon">&nbsp;</span>
+        </label>
+
+        <div class="navigation__background">&nbsp;</div>
+
+        <nav class="navigation__nav">
+          <ul class="navigation__list">
+            <li class="navigation__item">
+              <a href="#about" class="navigation__link"
+                ><span>01</span> Quienes somos?</a
+              >
+            </li>
+            <li class="navigation__item">
+              <a href="#features" class="navigation__link"
+                ><span>02</span> Nuestras líneas
+              </a>
+            </li>
+            <li class="navigation__item">
+              <a href="#tours" class="navigation__link"
+                ><span>03</span> Nuestros Productos</a
+              >
+            </li>
+            <li class="navigation__item">
+              <a href="#stories" class="navigation__link"
+                ><span>04</span> Testimonios</a
+              >
+            </li>
+            <li class="navigation__item">
+              <a href="#book" class="navigation__link"
+                ><span>05</span> Contacto
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
       <div class="parallax">
         <picture class="sky" id="sky">
           <source srcset="imgs/sky.webp" type="image/webp" />
@@ -22,32 +62,35 @@
         <picture class="logo" id="logo">
           <source srcset="imgs/logo.webp" type="image/webp" />
           <source srcset="imgs/logo.png" type="image/png" />
-          <img src="imgs/logo.png" alt="logo" />
-        </picture><picture class="hill" id="hill">
+          <img src="imgs/logo.png" alt="logo" /> </picture
+        ><picture class="hill" id="hill">
           <source srcset="imgs/hill.webp" type="image/webp" />
           <source srcset="imgs/hill.png" type="image/png" />
           <img src="imgs/hill.png" alt="hill" />
         </picture>
-        
         <picture class="main" id="main">
           <source srcset="imgs/main.webp" type="image/webp" />
           <source srcset="imgs/main.png" type="image/png" />
           <img src="imgs/main.png" alt="cow" />
         </picture>
       </div>
+
+      <h1 class="heading-secondary u-margin-top-big u-center-text" id="first-title">
+        Productos lácteos orgánicos, 100% naturales, sin aditivos ni
+        conservantes
+      </h1>
     </header>
 
-    <h1 class="heading-primary--sub">
-      Productos lácteos orgánicos, 100% naturales, sin aditivos ni conservantes
-    </h1>
-
     <script>
+      //DOM STUFF
       let sky = document.getElementById("sky");
       let sun = document.getElementById("sun");
       let hill = document.getElementById("hill");
       let main = document.getElementById("main");
       let logo = document.getElementById("logo");
+      let firstTitle = document.getElementById("first-title");
 
+      //EVENT LISTENERS
       window.addEventListener("scroll", function () {
         var value = window.scrollY;
 
@@ -55,7 +98,11 @@
         sun.style.top = -50 - value * 1.3 + "px";
         hill.style.top = 200 - value * 0.3 + "px";
         logo.style.top = 25 + value * 0.1 + "%";
-        main.style.top = 100 -value * 0.1 + "px";
+        main.style.top = 100 - value * 0.1 + "px";
+
+        if (value >= 350) {
+           firstTitle.classList.add("move-in")
+        }
       });
     </script>
   </body>
