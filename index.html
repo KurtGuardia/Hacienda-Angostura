@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Hacienda Angostura | Productos orgánicos</title>
+  </head>
+  <body>
+    <header>
+      <div class="parallax">
+        <picture class="sky" id="sky">
+          <source srcset="imgs/sky.webp" type="image/webp" />
+          <source srcset="imgs/sky.jpg" type="image/jpg" />
+          <img src="imgs/sky.jpg" alt="sky" />
+        </picture>
+        <picture class="sun" id="sun">
+          <source srcset="imgs/sun.webp" type="image/webp" />
+          <source srcset="imgs/sun.png" type="image/png" />
+          <img src="imgs/sun.png" alt="sun" />
+        </picture>
+        <picture class="logo" id="logo">
+          <source srcset="imgs/logo.webp" type="image/webp" />
+          <source srcset="imgs/logo.png" type="image/png" />
+          <img src="imgs/logo.png" alt="logo" />
+        </picture><picture class="hill" id="hill">
+          <source srcset="imgs/hill.webp" type="image/webp" />
+          <source srcset="imgs/hill.png" type="image/png" />
+          <img src="imgs/hill.png" alt="hill" />
+        </picture>
+        
+        <picture class="main" id="main">
+          <source srcset="imgs/main.webp" type="image/webp" />
+          <source srcset="imgs/main.png" type="image/png" />
+          <img src="imgs/main.png" alt="cow" />
+        </picture>
+      </div>
+    </header>
+
+    <h1 class="heading-primary--sub">
+      Productos lácteos orgánicos, 100% naturales, sin aditivos ni conservantes
+    </h1>
+
+    <script>
+      let sky = document.getElementById("sky");
+      let sun = document.getElementById("sun");
+      let hill = document.getElementById("hill");
+      let main = document.getElementById("main");
+      let logo = document.getElementById("logo");
+
+      window.addEventListener("scroll", function () {
+        var value = window.scrollY;
+
+        sun.style.left = -250 + value * 2 + "px";
+        sun.style.top = -50 - value * 1.3 + "px";
+        hill.style.top = 200 - value * 0.3 + "px";
+        logo.style.top = 25 + value * 0.1 + "%";
+        main.style.top = 100 -value * 0.1 + "px";
+      });
+    </script>
+  </body>
+</html>
