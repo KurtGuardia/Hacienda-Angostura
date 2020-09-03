@@ -75,11 +75,51 @@
         </picture>
       </div>
 
-      <h1 class="heading-secondary u-margin-top-big u-center-text" id="first-title">
+      <h1
+        class="heading-secondary u-margin-top-big u-center-text"
+        id="first-title"
+      >
         Productos lácteos orgánicos, 100% naturales, sin aditivos ni
         conservantes
       </h1>
     </header>
+
+    <body>
+      <section class="intro">
+        <div class="with-img">
+          <div class="text">
+            <h1 class="heading-primary--sub">
+              Quieres saber qué son alimentos orgánicos?
+            </h1>
+
+            <p>
+              En la producción de alimentos orgánicos <strong>no</strong> se
+              emplea plaguicidas ni fertilizantes de síntesis química. Están
+              libres de hormonas, antibióticos, residuos de metales pesados, sin
+              uso de colorantes y saborizantes artificiales, así como de
+              Organismos genéticamente Modificados. 💀 <br />
+              <br />
+              🌄 Se trata de alimentos de producción sostenible, amigable con el
+              medio ambiente y respetuosa de los animales 🐄. <br> <br> Con todo ésto se
+              producen alimentos de mayor calidad y mejor sabor! <br />
+              <br />
+              Quieres probarlos? 🌈
+              <br />
+              <br />
+            </p>
+            <a href="#" class="btn">Contáctanos!</a>
+          </div>
+
+          <div class="img">
+            <picture>
+              <source srcset="imgs/girl-with-cow.webp" type="image/webp" />
+              <source srcset="imgs/girl-with-cow.jpg" type="image/jpg" />
+              <img src="imgs/girl-with-cow.jpg" class="intro-img" alt="cow" />
+            </picture>
+          </div>
+        </div>
+      </section>
+    </body>
 
     <script>
       //DOM STUFF
@@ -101,7 +141,7 @@
         main.style.top = 100 - value * 0.1 + "px";
 
         if (value >= 350) {
-           firstTitle.classList.add("move-in")
+          firstTitle.classList.add("move-in");
         }
       });
     </script>

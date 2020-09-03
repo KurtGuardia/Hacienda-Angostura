@@ -1,0 +1,37 @@
+.intro {
+  padding: 20rem;
+
+  h1 {
+    padding-bottom: 5rem;
+    font-size: 2.5rem;
+    color: $color-grey-dark;
+  }
+
+  .with-img {
+    display: flex;
+
+    .text {
+      padding-right: 10rem;
+      width: 45vw;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      
+      p {
+        font-size: $default-font-size;
+      }
+      
+      .btn{
+          margin-top: 5rem;
+      }
+    }
+
+    .img {
+      width: 18vw;
+
+      .intro-img {
+        width: 100%;
+      }
+    }
+  }
+}
