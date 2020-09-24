@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="shortcut icon" type="image/png" href="./imgs/logo.png" />
     <title>Hacienda Angostura | Productos orgánicos</title>
   </head>
   <body>
@@ -100,8 +101,10 @@
               Organismos genéticamente Modificados. 💀 <br />
               <br />
               🌄 Se trata de alimentos de producción sostenible, amigable con el
-              medio ambiente y respetuosa de los animales 🐄. <br> <br> Con todo ésto se
-              producen alimentos de mayor calidad y mejor sabor! <br />
+              medio ambiente y respetuosa de los animales 🐄. <br />
+              <br />
+              Con todo ésto se producen alimentos de mayor calidad y mejor
+              sabor! <br />
               <br />
               Quieres probarlos? 🌈
               <br />
@@ -119,6 +122,145 @@
           </div>
         </div>
       </section>
+
+      <section class="section-img">
+        <ul class="showcase clear-fix">
+          <li>
+            <figure class="showcase-photo">
+              <picture class="showcase-picture">
+                <source srcset="imgs/showcase1.webp" type="image/webp" />
+                <source srcset="imgs/showcase1.png" type="image/png" />
+                <img
+                  src="imgs/showcase1.png"
+                  alt="showcase image"
+                  class="showcase-img"
+                />
+              </picture>
+            </figure>
+          </li>
+          <li>
+            <figure class="showcase-photo">
+              <picture class="showcase-picture">
+                <source srcset="imgs/showcase2.webp" type="image/webp" />
+                <source srcset="imgs/showcase2.png" type="image/png" />
+                <img
+                  src="imgs/showcase2.png"
+                  alt="showcase image"
+                  class="showcase-img"
+                />
+              </picture>
+            </figure>
+          </li>
+          <li>
+            <figure class="showcase-photo">
+              <picture class="showcase-picture">
+                <source srcset="imgs/showcase8.webp" type="image/webp" />
+                <source srcset="imgs/showcase8.png" type="image/png" />
+                <img
+                  src="imgs/showcase8.png"
+                  alt="showcase image"
+                  class="showcase-img"
+                />
+              </picture>
+            </figure>
+          </li>
+          <li>
+            <figure class="showcase-photo">
+              <picture class="showcase-picture">
+                <source srcset="imgs/showcase4.webp" type="image/webp" />
+                <source srcset="imgs/showcase4.png" type="image/png" />
+                <img
+                  src="imgs/showcase4.png"
+                  alt="showcase image"
+                  class="showcase-img"
+                />
+              </picture>
+            </figure>
+          </li>
+        </ul>
+        <ul class="showcase clear-fix">
+          <li>
+            <figure class="showcase-photo">
+              <picture class="showcase-picture">
+                <source srcset="imgs/showcase5.webp" type="image/webp" />
+                <source srcset="imgs/showcase5.png" type="image/png" />
+                <img
+                  src="imgs/showcase5.png"
+                  alt="showcase image"
+                  class="showcase-img"
+                />
+              </picture>
+            </figure>
+          </li>
+          <li>
+            <figure class="showcase-photo">
+              <picture class="showcase-picture">
+                <source srcset="imgs/showcase7.webp" type="image/webp" />
+                <source srcset="imgs/showcase7.png" type="image/png" />
+                <img
+                  src="imgs/showcase7.png"
+                  alt="showcase image"
+                  class="showcase-img"
+                />
+              </picture>
+            </figure>
+          </li>
+          <li>
+            <figure class="showcase-photo">
+              <picture class="showcase-picture">
+                <source srcset="imgs/showcase3.webp" type="image/webp" />
+                <source srcset="imgs/showcase3.png" type="image/png" />
+                <img
+                  src="imgs/showcase3.png"
+                  alt="showcase image"
+                  class="showcase-img"
+                />
+              </picture>
+            </figure>
+          </li>
+          <li>
+            <figure class="showcase-photo">
+              <picture class="showcase-picture">
+                <source srcset="imgs/showcase6.webp" type="image/webp" />
+                <source srcset="imgs/showcase6.png" type="image/png" />
+                <img
+                  src="imgs/showcase6.png"
+                  alt="showcase image"
+                  class="showcase-img"
+                />
+              </picture>
+            </figure>
+          </li>
+        </ul>
+     </section>
+
+<!-- Section Old -->
+
+        <div class="col-2">
+          <div class="img-container">
+            <picture class="old-picture">
+              <source srcset="imgs/antigua.webp" type="image/webp" />
+              <source srcset="imgs/antigua.png" type="image/png" />
+              <img
+                src="imgs/antigua.png"
+                alt="foto antigua de la hacienda"
+                class="old-img"
+              />
+            </picture>
+          </div>
+
+          <div class="text-container">
+            <h1 class="heading-primary--sub u-margin-top-big u-center-text">
+              Sabías que la Hacienda Angostura funciona desde 1916?
+            </h1>
+            <h1 class="heading-primary--sub u-margin-top-big u-center-text">
+              ....con <span id="year"></span> años es la granja lechera
+              <strong>más antigua</strong> de Cochabamba.
+            </h1>
+          </div>
+        </div>
+
+
     </body>
 
     <script>
@@ -129,6 +271,7 @@
       let main = document.getElementById("main");
       let logo = document.getElementById("logo");
       let firstTitle = document.getElementById("first-title");
+      let year = document.getElementById("year");
 
       //EVENT LISTENERS
       window.addEventListener("scroll", function () {
@@ -144,6 +287,12 @@
           firstTitle.classList.add("move-in");
         }
       });
+
+      //Functions
+      const date = new Date();
+      const presentYear = date.getFullYear();
+      const age = presentYear - 1916;
+      year.textContent = age;
     </script>
   </body>
 </html>

@@ -1,0 +1,14 @@
+.col-2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20rem 0;
+  min-height: 90vh;
+  .img-container {
+  }
+
+  .text-container{
+      max-width: 60rem;
+      padding: 0 10rem;
+  }
+}
