@@ -377,7 +377,7 @@ header h1 {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 20rem 0;
+  margin: 20rem 0 0;
   min-height: 90vh; }
   .col-2 .text-container {
     max-width: 60rem;
@@ -486,3 +486,52 @@ header h1 {
           -webkit-transform: scale(1.055);
           transform: scale(1.055);
           opacity: 1; }
+
+.facts__container {
+  font-size: 1.4rem;
+  list-style: none;
+  margin: 5.5rem; }
+  @media only screen and (max-width: 56.25em) {
+    .facts__container {
+      display: flex;
+      margin: 0; } }
+  .facts__container .fact {
+    display: flex;
+    flex-direction: column; }
+    .facts__container .fact ol, .facts__container .fact small {
+      align-self: center;
+      width: 80%;
+      font-size: 2rem;
+      line-height: 4rem; }
+  .facts__container strong {
+    color: #0861D7;
+    font-weight: bolder; }
+  .facts__container .fact__title {
+    position: relative;
+    transition: color 0.8s;
+    font-size: xxx-large;
+    padding-left: 3rem; }
+    .facts__container .fact__title:not(:last-child) {
+      margin-bottom: 0.5rem; }
+      @media only screen and (max-width: 56.25em) {
+        .facts__container .fact__title:not(:last-child) {
+          margin-bottom: 0; } }
+    @media only screen and (max-width: 56.25em) {
+      .facts__container .fact__title {
+        flex: 1; } }
+    .facts__container .fact__title::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 3px;
+      background: #B82036;
+      transform: scaleY(0);
+      transition: transform 0.2s, width 0.4s cubic-bezier(1, 0, 0, 1) 0.2s, background-color 0.1s; }
+    .facts__container .fact__title:hover {
+      color: #fff; }
+    .facts__container .fact__title:hover::before {
+      transform: scaleY(1);
+      width: 100%;
+      z-index: -1; }

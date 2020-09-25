@@ -1,0 +1,68 @@
+.facts__container {
+  font-size: 1.4rem;
+  list-style: none;
+  margin: 5.5rem;
+
+  @include respond(tab-port) {
+    display: flex;
+    margin: 0;
+  }
+
+  .fact{
+   display: flex;
+   flex-direction: column;
+
+   & ol, & small{
+       align-self: center;
+       width: 80%;
+       font-size: 2rem;
+       line-height: 4rem;
+   }
+  }
+
+  strong{
+      color: $color-secondary;
+      font-weight: bolder;
+  }
+
+  .fact__title {
+    position: relative;
+    transition: color 0.8s;
+    font-size: xxx-large;
+    padding-left: 3rem;
+
+    &:not(:last-child) {
+      margin-bottom: 0.5rem;
+
+      @include respond(tab-port) {
+        margin-bottom: 0;
+      }
+    }
+
+    @include respond(tab-port) {
+      flex: 1;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 3px;
+      background: $color-primary;
+      transform: scaleY(0);
+      transition: transform 0.2s, width 0.4s cubic-bezier(1, 0, 0, 1) 0.2s,
+        background-color 0.1s;
+    }
+
+    &:hover {
+      color: $color-white;
+    }
+    &:hover::before {
+      transform: scaleY(1);
+      width: 100%;
+      z-index: -1;
+    }
+  }
+}
