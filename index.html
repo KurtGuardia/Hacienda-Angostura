@@ -262,9 +262,13 @@
 
       <!--  -->
 
+      <!-- Section Facts -->
+
       <ul class="facts__container">
         <li class="fact">
-          <h2 class="fact__title heading-primary--sub">7 motivos para producir</h2>
+          <h2 class="fact__title r heading-primary--sub">
+            7 motivos para producir
+          </h2>
           <ol class="hidden">
             <li>
               <h4><strong>Calidad de vida</strong></h4>
@@ -330,20 +334,22 @@
                 transgénicos.
               </p>
             </li>
+            <small
+              >Fuente:
+              <a
+                href="https://www.bialarblog.com/productos-organicos-ecologico/"
+                target="_blank"
+                rel="noreferrer"
+                >Bialar</a
+              ></small
+            >
           </ol>
-          <small
-            >Fuente:
-            <a
-              href="https://www.bialarblog.com/productos-organicos-ecologico/"
-              target="_blank"
-              rel="noreferrer"
-              >Bialar</a
-            ></small
-          >
         </li>
 
         <li class="fact">
-          <h2 class="fact__title heading-primary--sub">6 motivos para consumir</h2>
+          <h2 class="fact__title y heading-primary--sub">
+            6 motivos para consumir
+          </h2>
           <ol class="hidden">
             <li>
               No poseen químicos, pesticidas, fertilizantes o aditivos
@@ -359,20 +365,20 @@
             </li>
             <li>Colaboración con la prevención del calentamiento global.</li>
             <li>Lo orgánico es sinónimo de Biodiversidad</li>
+            <small
+              >Fuente:
+              <a
+                href="https://www.bialarblog.com/productos-organicos-ecologico/"
+                target="_blank"
+                rel="noreferrer"
+                >Bialar</a
+              ></small
+            >
           </ol>
-          <small
-            >Fuente:
-            <a
-              href="https://www.bialarblog.com/productos-organicos-ecologico/"
-              target="_blank"
-              rel="noreferrer"
-              >Bialar</a
-            ></small
-          >
         </li>
 
         <li class="fact">
-          <h2 class="fact__title heading-primary--sub">
+          <h2 class="fact__title g heading-primary--sub">
             5 mitos sobre alimentos orgánicos
           </h2>
           <ol class="hidden">
@@ -418,8 +424,8 @@
               <strong>Mito:</strong> "Pobres animales: ¡les dejan sufrir sin
               tratarlos con medicamentos!"
               <br />
-              <strong>La realidad:</strong> Especialmente los productos de origen
-              animal, no contienen residuos de antibióticos ni otros
+              <strong>La realidad:</strong> Especialmente los productos de
+              origen animal, no contienen residuos de antibióticos ni otros
               medicamentos que habitualmente se proporcionan al ganado para
               acrecentar su productividad y hacerlo más resistente al
               envejecimiento y el desgaste. La asistencia veterinaria se realiza
@@ -448,8 +454,15 @@
               industrial, los cuales son tratados con aditivos y conservantes
               que les pueden llegar a cambiar el sabor.
             </li>
+            <small
+              ><a
+                href="https://blog.oxfamintermon.org/5-verdades-y-mitos-sobre-los-productos-organicos/"
+                target="_blank"
+                rel="noreferrer"
+                >Oxfam</a
+              ></small
+            >
           </ol>
-          <small><a href="https://blog.oxfamintermon.org/5-verdades-y-mitos-sobre-los-productos-organicos/" target="_blank" rel="noreferrer">Oxfam</a></small>
         </li>
       </ul>
     </body>
@@ -463,6 +476,8 @@
       let logo = document.getElementById("logo");
       let firstTitle = document.getElementById("first-title");
       let year = document.getElementById("year");
+      let facts = document.querySelectorAll(".fact__title")
+
 
       //EVENT LISTENERS
       window.addEventListener("scroll", function () {
@@ -478,6 +493,14 @@
           firstTitle.classList.add("move-in");
         }
       });
+
+      facts.forEach((el) =>
+        el.addEventListener("click", function () {
+          const sibling = this.nextElementSibling;
+          sibling.classList.toggle("active");
+          el.classList.toggle("active");
+        })
+      );
 
       //Functions
       const date = new Date();

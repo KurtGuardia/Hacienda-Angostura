@@ -497,41 +497,59 @@ header h1 {
       margin: 0; } }
   .facts__container .fact {
     display: flex;
-    flex-direction: column; }
-    .facts__container .fact ol, .facts__container .fact small {
+    flex-direction: column;
+    cursor: pointer; }
+    .facts__container .fact .r::before {
+      background: #B82036; }
+    .facts__container .fact .y::before {
+      background: #e4ce07; }
+    .facts__container .fact .g::before {
+      background: #00c864; }
+    .facts__container .fact__title {
+      position: relative;
+      transition: color 0.8s;
+      font-size: xxx-large;
+      padding-left: 3rem; }
+      .facts__container .fact__title:not(:last-child) {
+        margin-bottom: 0.5rem; }
+        @media only screen and (max-width: 56.25em) {
+          .facts__container .fact__title:not(:last-child) {
+            margin-bottom: 0; } }
+      @media only screen and (max-width: 56.25em) {
+        .facts__container .fact__title {
+          flex: 1; } }
+      .facts__container .fact__title::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 3px;
+        background: #B82036;
+        transform: scaleY(0);
+        transition: transform 0.2s, width 0.4s cubic-bezier(1, 0, 0, 1) 0.2s, background-color 0.1s; }
+      .facts__container .fact__title:hover {
+        color: #fff; }
+      .facts__container .fact__title:hover::before {
+        transform: scaleY(1);
+        width: 100%;
+        z-index: -1; }
+    .facts__container .fact ol {
       align-self: center;
       width: 80%;
       font-size: 2rem;
       line-height: 4rem; }
+    .facts__container .fact .hidden {
+      display: none; }
+    .facts__container .fact .active {
+      display: block;
+      color: #fff; }
+      .facts__container .fact .active::before {
+        transform: scaleY(1);
+        width: 100%;
+        z-index: -1; }
+      .facts__container .fact .active li, .facts__container .fact .active small {
+        color: #777; }
   .facts__container strong {
     color: #0861D7;
     font-weight: bolder; }
-  .facts__container .fact__title {
-    position: relative;
-    transition: color 0.8s;
-    font-size: xxx-large;
-    padding-left: 3rem; }
-    .facts__container .fact__title:not(:last-child) {
-      margin-bottom: 0.5rem; }
-      @media only screen and (max-width: 56.25em) {
-        .facts__container .fact__title:not(:last-child) {
-          margin-bottom: 0; } }
-    @media only screen and (max-width: 56.25em) {
-      .facts__container .fact__title {
-        flex: 1; } }
-    .facts__container .fact__title::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      height: 100%;
-      width: 3px;
-      background: #B82036;
-      transform: scaleY(0);
-      transition: transform 0.2s, width 0.4s cubic-bezier(1, 0, 0, 1) 0.2s, background-color 0.1s; }
-    .facts__container .fact__title:hover {
-      color: #fff; }
-    .facts__container .fact__title:hover::before {
-      transform: scaleY(1);
-      width: 100%;
-      z-index: -1; }
