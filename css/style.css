@@ -504,7 +504,7 @@ header h1 {
     .facts__container .fact .y::before {
       background: #e4ce07; }
     .facts__container .fact .g::before {
-      background: #00c864; }
+      background: #09924e; }
     .facts__container .fact__title {
       position: relative;
       transition: color 0.8s;
@@ -553,3 +553,11 @@ header h1 {
   .facts__container strong {
     color: #0861D7;
     font-weight: bolder; }
+
+.section-products {
+  display: flex;
+  flex-direction: column; }
+  .section-products .products {
+    display: flex;
+    justify-content: center;
+    align-items: center; }

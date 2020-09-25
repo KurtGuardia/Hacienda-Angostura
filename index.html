@@ -465,6 +465,45 @@
           </ol>
         </li>
       </ul>
+
+      <!-- Section Products -->
+      <section class="section-products">
+        <h1 class="heading-secondary u-margin-top-big u-center-text">
+          Productos
+        </h1>
+        <div class="products">
+          <picture class="product">
+            <source srcset="imgs/queso.webp" type="image/webp" />
+            <source srcset="imgs/queso.jpg" type="image/jpg" />
+            <img src="imgs/queso.jpg" alt="queso" /> </picture
+          ><picture class="product">
+            <source srcset="imgs/leche.webp" type="image/webp" />
+            <source srcset="imgs/leche.jpg" type="image/jpg" />
+            <img src="imgs/leche.jpg" alt="leche" />
+          </picture>
+        </div>
+
+        <div class="products">
+          <picture class="product">
+            <source srcset="imgs/mantequilla.webp" type="image/webp" />
+            <source srcset="imgs/mantequilla.jpg" type="image/jpg" />
+            <img src="imgs/mantequilla.jpg" alt="mantequilla" /> </picture
+          ><picture class="product">
+            <source srcset="imgs/requeson.webp" type="image/webp" />
+            <source srcset="imgs/requeson.jpg" type="image/jpg" />
+            <img src="imgs/requeson.jpg" alt="requeson" />
+          </picture>
+        </div>
+
+        <div class="products">
+          <picture class="product">
+            <source srcset="imgs/nata.webp" type="image/webp" />
+            <source srcset="imgs/nata.jpg" type="image/jpg" />
+            <img src="imgs/nata.jpg" alt="nata" /> 
+          </picture>
+        </div>
+
+      </section>
     </body>
 
     <script>
@@ -476,8 +515,7 @@
       let logo = document.getElementById("logo");
       let firstTitle = document.getElementById("first-title");
       let year = document.getElementById("year");
-      let facts = document.querySelectorAll(".fact__title")
-
+      let facts = document.querySelectorAll(".fact__title");
 
       //EVENT LISTENERS
       window.addEventListener("scroll", function () {
