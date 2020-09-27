@@ -350,27 +350,27 @@ header h1 {
   top: 0;
   transform: rotate(-135deg); }
 
-.intro {
+#intro {
   padding: 20rem; }
-  .intro h1 {
+  #intro h1 {
     padding-bottom: 5rem;
     font-size: 2.5rem;
     color: #777; }
-  .intro .with-img {
+  #intro .with-img {
     display: flex; }
-    .intro .with-img .text {
+    #intro .with-img .text {
       padding-right: 10rem;
       width: 45vw;
       display: flex;
       flex-direction: column;
       align-items: center; }
-      .intro .with-img .text p {
+      #intro .with-img .text p {
         font-size: 1.6rem; }
-      .intro .with-img .text .btn {
+      #intro .with-img .text .btn {
         margin-top: 5rem; }
-    .intro .with-img .img {
+    #intro .with-img .img {
       width: 18vw; }
-      .intro .with-img .img .intro-img {
+      #intro .with-img .img .intro-img {
         width: 100%; }
 
 .col-2 {
@@ -456,23 +456,23 @@ header h1 {
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
   transform: translateY(0); }
 
-.section-img .showcase {
+#section-imgs .showcase {
   list-style: none;
   width: 100%;
   height: 25rem; }
-  .section-img .showcase li {
+  #section-imgs .showcase li {
     display: block;
     float: left;
     width: 25%;
     height: auto; }
-  .section-img .showcase-photo {
+  #section-imgs .showcase-photo {
     width: 100%;
     margin: 0;
     overflow: hidden;
     background-color: black; }
-    .section-img .showcase-photo .showcase-picture {
+    #section-imgs .showcase-photo .showcase-picture {
       height: auto; }
-      .section-img .showcase-photo .showcase-picture .showcase-img {
+      #section-imgs .showcase-photo .showcase-picture .showcase-img {
         opacity: 0.6;
         width: 100%;
         height: 25rem;
@@ -482,7 +482,7 @@ header h1 {
         transition: opacity 0.5s, -webkit-transform 0.5s;
         transition: transform 0.5s, opacity 0.5s;
         transition: transform 0.5s, opacity 0.5s, -webkit-transform 0.5s; }
-        .section-img .showcase-photo .showcase-picture .showcase-img:hover {
+        #section-imgs .showcase-photo .showcase-picture .showcase-img:hover {
           -webkit-transform: scale(1.055);
           transform: scale(1.055);
           opacity: 1; }
@@ -554,26 +554,26 @@ header h1 {
     color: #0861D7;
     font-weight: bolder; }
 
-.section-products {
+#section-products {
   display: flex;
   flex-direction: column; }
-  .section-products h1 {
+  #section-products h1 {
     margin-bottom: 10rem; }
-  .section-products .products {
+  #section-products .products {
     display: flex;
     justify-content: center;
     flex-wrap: wrap; }
-    .section-products .products picture {
+    #section-products .products picture {
       position: relative;
       margin: 7rem 5rem;
       cursor: pointer; }
-      .section-products .products picture::before {
+      #section-products .products picture::before {
         position: absolute;
         right: 20rem;
         top: -6rem;
         font-size: 3.5rem;
         width: fit-content; }
-      .section-products .products picture:hover::after {
+      #section-products .products picture:hover::after {
         content: "+info";
         position: absolute;
         top: 30%;
@@ -583,22 +583,22 @@ header h1 {
         color: #0861D7;
         background-color: rgba(255, 255, 255, 0.678);
         border-radius: 50%; }
-      .section-products .products picture:hover .product {
+      #section-products .products picture:hover .product {
         filter: blur(8px) brightness(100%);
         transform: scale(0.9); }
-      .section-products .products picture .product {
+      #section-products .products picture .product {
         width: 35rem;
         height: 25rem;
         transition: all 0.5s; }
-      .section-products .products picture.queso::before {
+      #section-products .products picture.queso::before {
         content: "Queso Fresco"; }
-      .section-products .products picture.leche::before {
+      #section-products .products picture.leche::before {
         content: "Leche Pura"; }
-      .section-products .products picture.mantequilla::before {
+      #section-products .products picture.mantequilla::before {
         content: "Mantequilla"; }
-      .section-products .products picture.requeson::before {
+      #section-products .products picture.requeson::before {
         content: "Requeson"; }
-      .section-products .products picture.nata::before {
+      #section-products .products picture.nata::before {
         content: "Nata"; }
 
 footer .modal-bg {
