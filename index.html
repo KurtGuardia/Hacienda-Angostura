@@ -474,15 +474,15 @@
           Productos
         </h1>
         <div class="products">
-          <picture class="queso">
+          <picture class="modalBtn queso">
             <source srcset="imgs/queso.webp" type="image/webp" />
             <source srcset="imgs/queso.jpg" type="image/jpg" />
             <img class="product" src="imgs/queso.jpg" alt="queso" /> </picture
-          ><picture class="leche">
+          ><picture class="modalBtn leche">
             <source srcset="imgs/leche.webp" type="image/webp" />
             <source srcset="imgs/leche.jpg" type="image/jpg" />
             <img class="product" src="imgs/leche.jpg" alt="leche" /> </picture
-          ><picture class="mantequilla">
+          ><picture class="modalBtn mantequilla">
             <source srcset="imgs/mantequilla.webp" type="image/webp" />
             <source srcset="imgs/mantequilla.jpg" type="image/jpg" />
             <img
@@ -490,7 +490,7 @@
               src="imgs/mantequilla.jpg"
               alt="mantequilla"
             /> </picture
-          ><picture class="requeson">
+          ><picture class="modalBtn requeson">
             <source srcset="imgs/requeson.webp" type="image/webp" />
             <source srcset="imgs/requeson.jpg" type="image/jpg" />
             <img
@@ -498,7 +498,7 @@
               src="imgs/requeson.jpg"
               alt="requeson"
             /> </picture
-          ><picture class="nata">
+          ><picture class="modalBtn nata">
             <source srcset="imgs/nata.webp" type="image/webp" />
             <source srcset="imgs/nata.jpg" type="image/jpg" />
             <img class="product" src="imgs/nata.jpg" alt="nata" />
@@ -506,6 +506,25 @@
         </div>
       </section>
     </body>
+
+    <footer>
+
+      <div class="modal-bg">
+        <div class="modal">
+          <picture>
+            <source id="srcWp" srcset="./imgs/leche-prod.webp" type="image/webp" />
+            <source id="srcJg" srcset="./imgs/leche-prod.jpg" type="image/jpg" />
+            <img id="src"
+              src="./imgs/leche-prod.jpg"
+              class="leche-prod"
+              alt="Especificaciones del producto"
+            />
+          </picture>
+        </div>
+        <span class="modal-close">X</span>
+      </div>
+
+    </footer>
 
     <script>
       //DOM STUFF
@@ -517,6 +536,12 @@
       let firstTitle = document.getElementById("first-title");
       let year = document.getElementById("year");
       let facts = document.querySelectorAll(".fact__title");
+      let modals = document.querySelectorAll(".modalBtn")
+      let sourceWebp = document.getElementById("srcWp")
+      let sourceJpg = document.getElementById("srcJg")
+      let srcImg = document.getElementById("src")
+      let modalBg = document.querySelector(".modal-bg");
+      let modalClose = document.querySelector(".modal-close");
 
       //EVENT LISTENERS
       window.addEventListener("scroll", function () {
@@ -540,6 +565,32 @@
           el.classList.toggle("active");
         })
       );
+
+      let product;
+      modals.forEach((e) =>
+        e.addEventListener("click", function () {
+          
+          if(e.classList.contains("queso")){
+            product = "queso"
+          } else if(e.classList.contains("leche")){
+            product = "leche"
+          } else if(e.classList.contains("mantequilla")){
+            product = "mantequilla"
+          } else if(e.classList.contains("requeson")){
+            product = "requeson"
+          } else if(e.classList.contains("nata")){
+            product = "nata"
+          }
+          modalBg.classList.add("bg-active");
+          sourceWebp.srcset = `./imgs/${product}-prod.webp`
+          sourceJpg.srcset = `./imgs/${product}-prod.jpg`
+          srcImg.src = `./imgs/${product}-prod.jpg`      
+        })
+      );
+      
+      modalClose.addEventListener("click", function () {
+        modalBg.classList.remove("bg-active");
+      });
 
       //Functions
       const date = new Date();

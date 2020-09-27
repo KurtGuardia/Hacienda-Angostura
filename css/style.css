@@ -565,7 +565,8 @@ header h1 {
     flex-wrap: wrap; }
     .section-products .products picture {
       position: relative;
-      margin: 7rem 5rem; }
+      margin: 7rem 5rem;
+      cursor: pointer; }
       .section-products .products picture::before {
         position: absolute;
         right: 20rem;
@@ -599,3 +600,40 @@ header h1 {
         content: "Requeson"; }
       .section-products .products picture.nata::before {
         content: "Nata"; }
+
+footer .modal-bg {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.5s; }
+  footer .modal-bg.bg-active {
+    visibility: visible;
+    opacity: 1; }
+  footer .modal-bg .modal {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 60%;
+    height: 70%;
+    position: relative;
+    border-radius: 8px; }
+  footer .modal-bg .modal-close {
+    color: #B82036;
+    position: absolute;
+    top: 3rem;
+    right: 30rem;
+    padding: 0 2rem;
+    font-weight: bold;
+    font-size: xxx-large;
+    background-color: #0862d785;
+    border-radius: 50%;
+    cursor: pointer; }
