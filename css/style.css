@@ -390,59 +390,55 @@ header h1 {
     max-width: 60rem;
     padding: 0 10rem; }
 
-footer {
-  background-color: #B82036;
+.footer {
+  background-image: linear-gradient(to right bottom, #dd1b38, #970e22);
   color: #fff;
   padding: 2rem; }
-  footer .footer__content {
+  .footer p {
+    font-size: 1.6rem; }
+  .footer__content {
     display: flex;
     align-items: center;
     justify-content: space-around; }
-    footer .footer__content--quote {
+    .footer__content--quote {
       width: 20%; }
-      footer .footer__content--quote p.tiny-text {
+      .footer__content--quote p.tiny-text {
         margin: 2rem 0 0 3rem; }
-    footer .footer__content--logo {
-      width: 30%;
+    .footer__content--logo {
+      width: 20%;
       fill: #fff;
       text-align: center; }
-      footer .footer__content--logo img {
+      .footer__content--logo img {
         width: 100%; }
-    footer .footer__content--social .media {
-      justify-content: center;
-      margin-bottom: 2rem; }
-      footer .footer__content--social .media .facebook,
-      footer .footer__content--social .media .linkedin {
-        transition: all 1s; }
-      footer .footer__content--social .media .facebook:hover {
-        fill: #3b5998; }
-      footer .footer__content--social .media .linkedin:hover {
-        fill: #007bb6; }
-    footer .footer__content--social > div {
+    .footer__content--social > div {
       margin-top: 2.5rem;
       display: flex;
       align-items: center; }
-      footer .footer__content--social > div > svg {
+      .footer__content--social > div > svg {
         width: 10rem;
         fill: #970e22;
         height: 4rem; }
-    footer .footer__content--social .mobile svg,
-    footer .footer__content--social .mail svg,
-    footer .footer__content--social .github svg {
+    .footer__content--social .mobile svg,
+    .footer__content--social .mail svg,
+    .footer__content--social .facebook svg,
+    .footer__content--social .instagram svg {
       transition: all 0.5s; }
-    footer .footer__content--social .mobile:hover svg {
+    .footer__content--social .mobile:hover svg {
       fill: #08112f; }
-    footer .footer__content--social .mail:hover svg {
+    .footer__content--social .mail:hover svg {
       fill: #f4f4f4; }
-    footer .footer__content--social .github:hover svg {
-      fill: #000; }
-  footer .footer__copyright {
+    .footer__content--social .facebook:hover svg {
+      fill: #3b5998; }
+    .footer__content--social .instagram:hover svg {
+      fill: #833AB4; }
+  .footer__copyright {
     text-align: center; }
-    footer .footer__copyright span {
-      cursor: pointer;
+    .footer__copyright a {
+      color: #ffbb00;
       transition: all 1s ease;
-      display: inline-block; }
-    footer .footer__copyright span:hover {
+      display: inline-block;
+      text-decoration: none; }
+    .footer__copyright a:hover {
       box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.4);
       transform: rotate(-5deg) scale(1.3);
       background-color: #970e22; }
