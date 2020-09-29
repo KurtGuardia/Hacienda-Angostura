@@ -3,11 +3,6 @@
   list-style: none;
   margin: 5.5rem;
 
-  @include respond(tab-port) {
-    display: flex;
-    margin: 0;
-  }
-
   .fact {
     display: flex;
     flex-direction: column;
@@ -30,6 +25,10 @@
       transition: color 0.8s;
       font-size: xxx-large;
       padding-left: 3rem;
+
+      @include respond(tab-port) {
+        font-size: 4rem;
+      }
 
       &:not(:last-child) {
         margin-bottom: 0.5rem;
@@ -88,11 +87,11 @@
         z-index: -1;
       }
 
-      li, small{
-        color: $color-grey-dark
+      li,
+      small {
+        color: $color-grey-dark;
       }
     }
-
   }
 
   strong {

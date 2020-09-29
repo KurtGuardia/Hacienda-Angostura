@@ -177,6 +177,9 @@ header .parallax {
   justify-content: center;
   align-items: center;
   filter: brightness(80%); }
+  @media only screen and (max-width: 56.25em) {
+    header .parallax {
+      height: 75vh; } }
   header .parallax .sunrise {
     background-color: #ffbb00;
     height: 100vh;
@@ -193,11 +196,14 @@ header .parallax {
     header .parallax picture img {
       width: 100%;
       height: 100vh; }
+      @media only screen and (max-width: 56.25em) {
+        header .parallax picture img {
+          height: 75vh; } }
     header .parallax picture.sun {
       left: -250px;
       top: -50px; }
       header .parallax picture.sun img {
-        height: 100%; }
+        height: 80%; }
     header .parallax picture.hill {
       top: 200px;
       animation-name: fadeIn;
@@ -359,12 +365,18 @@ header h1 {
 
 #intro {
   padding: 20rem; }
+  @media only screen and (max-width: 56.25em) {
+    #intro {
+      padding: 8rem; } }
   #intro h1 {
     padding-bottom: 5rem;
     font-size: 2.5rem;
     color: #777; }
   #intro .with-img {
     display: flex; }
+    @media only screen and (max-width: 56.25em) {
+      #intro .with-img {
+        align-items: center; } }
     #intro .with-img .text {
       padding-right: 10rem;
       width: 45vw;
@@ -373,10 +385,13 @@ header h1 {
       align-items: center; }
       #intro .with-img .text p {
         font-size: 1.6rem; }
+        @media only screen and (max-width: 56.25em) {
+          #intro .with-img .text p {
+            font-size: 2rem; } }
       #intro .with-img .text .btn {
         margin-top: 5rem; }
     #intro .with-img .img {
-      width: 18vw; }
+      width: 35rem; }
       #intro .with-img .img .intro-img {
         width: 100%; }
 
@@ -386,9 +401,26 @@ header h1 {
   justify-content: center;
   margin: 20rem 0 10rem;
   min-height: 90vh; }
+  @media only screen and (max-width: 56.25em) {
+    .col-2 {
+      height: 75vh;
+      margin: 0; } }
+  .col-2 .img-container picture img {
+    width: 60rem; }
+    @media only screen and (max-width: 56.25em) {
+      .col-2 .img-container picture img {
+        width: 55rem; } }
   .col-2 .text-container {
     max-width: 60rem;
     padding: 0 10rem; }
+    @media only screen and (max-width: 56.25em) {
+      .col-2 .text-container {
+        padding: 04rem; } }
+    .col-2 .text-container > * {
+      font-size: xx-large; }
+      @media only screen and (max-width: 56.25em) {
+        .col-2 .text-container > * {
+          font-size: large; } }
 
 .footer {
   background-image: linear-gradient(to right bottom, #dd1b38, #970e22);
@@ -551,10 +583,6 @@ header h1 {
   font-size: 1.4rem;
   list-style: none;
   margin: 5.5rem; }
-  @media only screen and (max-width: 56.25em) {
-    .facts__container {
-      display: flex;
-      margin: 0; } }
   .facts__container .fact {
     display: flex;
     flex-direction: column;
@@ -570,6 +598,9 @@ header h1 {
       transition: color 0.8s;
       font-size: xxx-large;
       padding-left: 3rem; }
+      @media only screen and (max-width: 56.25em) {
+        .facts__container .fact__title {
+          font-size: 4rem; } }
       .facts__container .fact__title:not(:last-child) {
         margin-bottom: 0.5rem; }
         @media only screen and (max-width: 56.25em) {
@@ -608,7 +639,8 @@ header h1 {
         transform: scaleY(1);
         width: 100%;
         z-index: -1; }
-      .facts__container .fact .active li, .facts__container .fact .active small {
+      .facts__container .fact .active li,
+      .facts__container .fact .active small {
         color: #777; }
   .facts__container strong {
     color: #0861D7;
@@ -650,8 +682,14 @@ header h1 {
         transform: scale(0.9); }
       #section-products .products picture .product {
         width: 35rem;
-        height: 25rem;
+        height: auto;
         transition: all 0.5s; }
+        @media only screen and (max-width: 56.25em) {
+          #section-products .products picture .product {
+            width: 30rem; } }
+      @media only screen and (max-width: 56.25em) {
+        #section-products .products picture.queso {
+          margin-left: 93px; } }
       #section-products .products picture.queso::before {
         content: "Queso Fresco"; }
       #section-products .products picture.leche::before {

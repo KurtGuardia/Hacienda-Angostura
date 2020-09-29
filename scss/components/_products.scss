@@ -47,8 +47,18 @@
 
       & .product {
         width: 35rem;
-        height: 25rem;
+        height: auto;
         transition: all 0.5s;
+
+        @include respond(tab-port) {
+          width: 30rem;
+        }
+      }
+
+      @include respond(tab-port) {
+        &.queso {
+          margin-left: 93px;
+        }
       }
 
       &.queso::before {

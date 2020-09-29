@@ -4,10 +4,41 @@
   justify-content: center;
   margin: 20rem 0 10rem;
   min-height: 90vh;
-  
 
-  .text-container{
-      max-width: 60rem;
-      padding: 0 10rem;
+
+  @include respond(tab-port){
+    height: 75vh;
+    margin: 0;
+  }
+
+  .img-container{
+
+    picture{
+      img{
+        width: 60rem;
+        
+      @include respond(tab-port){
+        width: 55rem;
+      }
+      }
+      
+    }
+  }
+
+  .text-container {
+    max-width: 60rem;
+    padding: 0 10rem;
+
+    @include respond(tab-port){
+      padding: 04rem;
+    }
+
+    & > * {
+      font-size: xx-large;
+
+      @include respond(tab-port){
+        font-size: large;
+      }
+    }
   }
 }

@@ -1,6 +1,10 @@
 #intro {
   padding: 20rem;
 
+  @include respond(tab-port) {
+    padding: 8rem;
+  }
+
   h1 {
     padding-bottom: 5rem;
     font-size: 2.5rem;
@@ -10,24 +14,33 @@
   .with-img {
     display: flex;
 
+
+  @include respond(tab-port){
+   align-items: center; 
+  }
+
     .text {
       padding-right: 10rem;
       width: 45vw;
       display: flex;
       flex-direction: column;
       align-items: center;
-      
+
       p {
         font-size: $default-font-size;
+
+        @include respond(tab-port) {
+          font-size: 2rem;
+        }
       }
-      
-      .btn{
-          margin-top: 5rem;
+
+      .btn {
+        margin-top: 5rem;
       }
     }
 
     .img {
-      width: 18vw;
+      width: 35rem;
 
       .intro-img {
         width: 100%;
