@@ -175,7 +175,14 @@ header .parallax {
   overflow: hidden;
   display: flex;
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+  filter: brightness(80%); }
+  header .parallax .sunrise {
+    background-color: #ffbb00;
+    height: 100vh;
+    width: 100%;
+    z-index: 2;
+    opacity: 25%; }
   header .parallax picture {
     position: absolute;
     top: 0;
@@ -683,7 +690,7 @@ footer .modal-bg {
       .section-form .book .form__input:focus {
         outline: none;
         box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
-        border-bottom: 3px solid #B82036; }
+        border-bottom: 3px solid #009c34; }
       .section-form .book .form__input:focus:invalid {
         border-bottom: 3px solid #e91717; }
       .section-form .book .form__input::-webkit-input-placeholder {

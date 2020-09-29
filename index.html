@@ -32,7 +32,7 @@
             </li>
             <li class="navigation__item">
               <a href="#facts" class="navigation__link"
-                ><span>03</span>Motivos  y mitos de la producción orgánica</a
+                ><span>03</span>Motivos y mitos de la producción orgánica</a
               >
             </li>
             <li class="navigation__item">
@@ -49,7 +49,7 @@
         </nav>
       </div>
 
-      <div class="parallax">
+      <div class="parallax" id="parallax">
         <picture class="sky" id="sky">
           <source srcset="imgs/sky.webp" type="image/webp" />
           <source srcset="imgs/sky.jpg" type="image/jpg" />
@@ -58,22 +58,23 @@
         <picture class="sun" id="sun">
           <source srcset="imgs/sun.webp" type="image/webp" />
           <source srcset="imgs/sun.png" type="image/png" />
-          <img src="imgs/sun.png" alt="sun" />
-        </picture>
-        <picture class="logo" id="logo">
-          <source srcset="imgs/logo.webp" type="image/webp" />
-          <source srcset="imgs/logo.png" type="image/png" />
-          <img src="imgs/logo.png" alt="logo" /> </picture
+          <img src="imgs/sun.png" alt="sun" /> </picture
         ><picture class="hill" id="hill">
           <source srcset="imgs/hill.webp" type="image/webp" />
           <source srcset="imgs/hill.png" type="image/png" />
           <img src="imgs/hill.png" alt="hill" />
+        </picture>
+        <picture class="logo" id="logo">
+          <source srcset="imgs/logo.webp" type="image/webp" />
+          <source srcset="imgs/logo.png" type="image/png" />
+          <img src="imgs/logo.png" alt="logo" />
         </picture>
         <picture class="main" id="main">
           <source srcset="imgs/main.webp" type="image/webp" />
           <source srcset="imgs/main.png" type="image/png" />
           <img src="imgs/main.png" alt="cow" />
         </picture>
+        <div class="sunrise" id="sunrise"></div>
       </div>
 
       <h1
@@ -565,7 +566,7 @@
                     placeholder="Mándanos un mensaje, cuéntanos qué te gustaría y te contactaremos en la brevedad posible."
                     required
                   ></textarea>
-                </div>                
+                </div>
 
                 <div class="form__group">
                   <button class="btn btn--green" type="submit">
@@ -580,13 +581,21 @@
     </body>
 
     <footer>
-
       <div class="modal-bg">
         <div class="modal">
           <picture>
-            <source id="srcWp" srcset="./imgs/leche-prod.webp" type="image/webp" />
-            <source id="srcJg" srcset="./imgs/leche-prod.jpg" type="image/jpg" />
-            <img id="src"
+            <source
+              id="srcWp"
+              srcset="./imgs/leche-prod.webp"
+              type="image/webp"
+            />
+            <source
+              id="srcJg"
+              srcset="./imgs/leche-prod.jpg"
+              type="image/jpg"
+            />
+            <img
+              id="src"
               src="./imgs/leche-prod.jpg"
               class="leche-prod"
               alt="Especificaciones del producto"
@@ -595,37 +604,41 @@
         </div>
         <span class="modal-close">X</span>
       </div>
-
     </footer>
 
     <script>
       //DOM STUFF
+      let parallax = document.getElementById("parallax")
       let sky = document.getElementById("sky");
       let sun = document.getElementById("sun");
       let hill = document.getElementById("hill");
       let main = document.getElementById("main");
       let logo = document.getElementById("logo");
+      let sunrise = document.getElementById("sunrise");
       let firstTitle = document.getElementById("first-title");
       let year = document.getElementById("year");
       let facts = document.querySelectorAll(".fact__title");
-      let modals = document.querySelectorAll(".modalBtn")
-      let sourceWebp = document.getElementById("srcWp")
-      let sourceJpg = document.getElementById("srcJg")
-      let srcImg = document.getElementById("src")
+      let modals = document.querySelectorAll(".modalBtn");
+      let sourceWebp = document.getElementById("srcWp");
+      let sourceJpg = document.getElementById("srcJg");
+      let srcImg = document.getElementById("src");
       let modalBg = document.querySelector(".modal-bg");
       let modalClose = document.querySelector(".modal-close");
-      let links = document.querySelectorAll(".navigation__link")
+      let links = document.querySelectorAll(".navigation__link");
       const ham = document.querySelector(".navigation__checkbox");
 
       //EVENT LISTENERS
       window.addEventListener("scroll", function () {
         var value = window.scrollY;
-
+        
+        parallax.style.filter = "brightness(" + (80 + value / 15) + "%)";
         sun.style.left = -250 + value * 2 + "px";
         sun.style.top = -50 - value * 1.3 + "px";
         hill.style.top = 200 - value * 0.3 + "px";
         logo.style.top = 25 + value * 0.1 + "%";
         main.style.top = 100 - value * 0.1 + "px";
+        sunrise.style.opacity = 25 - value / 15 + "%";
+        
 
         if (value >= 350) {
           firstTitle.classList.add("move-in");
@@ -649,25 +662,24 @@
       let product;
       modals.forEach((e) =>
         e.addEventListener("click", function () {
-          
-          if(e.classList.contains("queso")){
-            product = "queso"
-          } else if(e.classList.contains("leche")){
-            product = "leche"
-          } else if(e.classList.contains("mantequilla")){
-            product = "mantequilla"
-          } else if(e.classList.contains("requeson")){
-            product = "requeson"
-          } else if(e.classList.contains("nata")){
-            product = "nata"
+          if (e.classList.contains("queso")) {
+            product = "queso";
+          } else if (e.classList.contains("leche")) {
+            product = "leche";
+          } else if (e.classList.contains("mantequilla")) {
+            product = "mantequilla";
+          } else if (e.classList.contains("requeson")) {
+            product = "requeson";
+          } else if (e.classList.contains("nata")) {
+            product = "nata";
           }
           modalBg.classList.add("bg-active");
-          sourceWebp.srcset = `./imgs/${product}-prod.webp`
-          sourceJpg.srcset = `./imgs/${product}-prod.jpg`
-          srcImg.src = `./imgs/${product}-prod.jpg`      
+          sourceWebp.srcset = `./imgs/${product}-prod.webp`;
+          sourceJpg.srcset = `./imgs/${product}-prod.jpg`;
+          srcImg.src = `./imgs/${product}-prod.jpg`;
         })
       );
-      
+
       modalClose.addEventListener("click", function () {
         modalBg.classList.remove("bg-active");
       });
