@@ -2,8 +2,8 @@
   padding: 15rem 0;
   background-image: linear-gradient(
     to right bottom,
-    $color-secondary-light,
-    $color-secondary-dark
+    rgba(216, 148, 0, 0.568),
+    rgba(116, 79, 1, 0.692)
   );
 
   @include respond(tab-port) {

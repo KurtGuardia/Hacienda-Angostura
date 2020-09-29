@@ -580,7 +580,58 @@
       </section>
     </body>
 
-    <footer>
+    <footer class="footer">
+      <div class="footer__content">
+        <div class="footer__content--quote">
+          <p class="small-text">
+            “ Los ojos de un animal tienen el poder de hablar un gran lenguaje “
+          </p>
+          <p class="tiny-text">
+            -Martin Buber (1878 - 1965), filósofo y escritor.
+          </p>
+        </div>
+
+        <div class="footer__content--logo">
+          <picture class="logo" id="logo">
+            <source srcset="imgs/logo.webp" type="image/webp" />
+            <source srcset="imgs/logo.png" type="image/png" />
+            <img src="imgs/logo.png" alt="logo"
+          /></picture>
+        </div>
+
+        <div class="footer__content--social">
+          <div class="mobile">
+            <svg>
+              <use xlink:href="imgs/sprite.svg#icon-phone"></use>
+            </svg>
+            <p class="small-text">774 81 099</p>
+          </div>
+
+          <div class="mail">
+            <svg>
+              <use xlink:href="imgs/sprite.svg#icon-mail"></use>
+            </svg>
+            <p class="small-text">mail</p>
+          </div>
+
+          <div class="media">
+            <svg class="facebook">
+              <use xlink:href="imgs/sprite.svg#icon-facebook"></use>
+            </svg>
+            <p class="small-text">Hacienda Angostura</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer__copyright">
+        Copyright &copy; 2020
+        <span class="modal-btn"
+          ><a href="www.phi-desarrollo.com" rel="noreferrer" target="_blank"
+            >Phi - Diseño y Desarrollo Web</a
+          ></span
+        >. Todos los derechos reservados.
+      </div>
+
       <div class="modal-bg">
         <div class="modal">
           <picture>
@@ -608,7 +659,7 @@
 
     <script>
       //DOM STUFF
-      let parallax = document.getElementById("parallax")
+      let parallax = document.getElementById("parallax");
       let sky = document.getElementById("sky");
       let sun = document.getElementById("sun");
       let hill = document.getElementById("hill");
@@ -630,7 +681,7 @@
       //EVENT LISTENERS
       window.addEventListener("scroll", function () {
         var value = window.scrollY;
-        
+
         parallax.style.filter = "brightness(" + (80 + value / 15) + "%)";
         sun.style.left = -250 + value * 2 + "px";
         sun.style.top = -50 - value * 1.3 + "px";
@@ -638,7 +689,6 @@
         logo.style.top = 25 + value * 0.1 + "%";
         main.style.top = 100 - value * 0.1 + "px";
         sunrise.style.opacity = 25 - value / 15 + "%";
-        
 
         if (value >= 350) {
           firstTitle.classList.add("move-in");

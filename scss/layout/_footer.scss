@@ -1,0 +1,160 @@
+footer {
+    background-color: $color-primary;
+    color: $color-white;
+    padding: 2rem;
+  
+    .footer {        
+      &__content {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+  
+        &--quote {
+          width: 20%;
+  
+          p.tiny-text {
+            margin: 2rem 0 0 3rem;
+          }
+  
+          @include respond(xs) {
+            width: 28%;
+            text-align: left;
+          }
+  
+          @include respond(xxs) {
+            p {
+            //   font-size: $tiny !important;
+  
+              &.tiny-text {
+                font-size: 1.5rem !important;
+              }
+            }
+          }
+  
+          @include respond(xxxs) {
+            width: 50%;
+  
+            p {
+              margin-top: 5rem;
+              font-size: $small !important;
+              text-align: center;
+              &.tiny-text {
+                font-size: 2rem !important;
+              }
+            }
+          }
+        }
+  
+        &--logo {
+          width: 30%;
+          fill: $color-white;
+          text-align: center;
+          img {
+            width: 100%;
+          }
+  
+          @include respond(xxxs) {
+            width: 50%;
+            margin-top: 5rem;
+          }
+        }
+  
+        &--social {
+          .media {
+            justify-content: center;
+            margin-bottom: 2rem;
+            .facebook,
+            .linkedin {
+              transition: all 1s;
+            }
+            .facebook:hover {
+              fill: #3b5998;
+            }
+            .linkedin:hover {
+              fill: #007bb6;
+            }
+          }
+  
+          & > div {
+            margin-top: 2.5rem;
+            display: flex;
+            align-items: center;
+  
+            & > svg {
+              width: 10rem;
+              fill: $color-primary-dark;
+              height: 4rem;
+  
+              @include respond(xxs) {
+                width: 6rem;
+              }
+  
+              @include respond(xxxs) {
+                width: 10rem;
+                height: 6rem;
+              }
+            }
+  
+            @include respond(xxxs) {
+              &:first-of-type {
+                margin-top: 0;
+              }
+  
+              p {
+                font-size: 3rem !important;
+              }
+            }
+          }
+  
+          .mobile,
+          .mail,
+          .github {
+            & svg {
+              transition: all 0.5s;
+            }
+          }
+          .mobile:hover {
+            & svg {
+              fill: #08112f;
+            }
+          }
+          .mail:hover {
+            & svg {
+              fill: #f4f4f4;
+            }
+          }
+          .github:hover {
+            & svg {
+              fill: #000;
+            }
+          }
+        }
+  
+        @include respond(xxxs) {
+          flex-direction: column;
+        }
+      }
+  
+      &__copyright {
+        // font-size: $tiny;
+        text-align: center;
+  
+        span {
+          cursor: pointer;
+          transition: all 1s ease;
+          display: inline-block;
+        }
+  
+        span:hover {
+          box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.4);
+          transform: rotate(-5deg) scale(1.3);
+          background-color: $color-primary-dark;
+        }
+  
+        @include respond(xxxs) {
+          font-size: 2rem;
+        }
+      }
+    }
+  }
+  
