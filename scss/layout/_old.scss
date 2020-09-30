@@ -5,23 +5,28 @@
   margin: 20rem 0 10rem;
   min-height: 90vh;
 
-
-  @include respond(tab-port){
+  @include respond(tab-port) {
     height: 75vh;
     margin: 0;
   }
 
-  .img-container{
+  @include respond(phone) {
+    flex-direction: column;
+  }
 
-    picture{
-      img{
+  .img-container {
+    picture {
+      img {
         width: 60rem;
-        
-      @include respond(tab-port){
-        width: 55rem;
+
+        @include respond(tab-port) {
+          width: 55rem;
+        }
+
+        @include respond(phone) {
+          width: 35rem;
+        }
       }
-      }
-      
     }
   }
 
@@ -29,15 +34,37 @@
     max-width: 60rem;
     padding: 0 10rem;
 
-    @include respond(tab-port){
+    @include respond(tab-port) {
       padding: 04rem;
+      width: 280px;
+    }
+
+    @include respond(phone) {
+      display: flex;
+      width: 100%;
+      padding: 0;
     }
 
     & > * {
       font-size: xx-large;
 
-      @include respond(tab-port){
+      @include respond(tab-port) {
         font-size: large;
+      }
+
+      @include respond(phone) {
+        margin-top: 2rem !important;
+        font-size: medium;
+      }
+
+      @include respond(phone) {
+        &:first-child {
+          border-right: 1px solid #bbb;
+        }
+
+        &:last-child {
+          padding-left: 0.6rem;
+        }
       }
     }
   }

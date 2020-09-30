@@ -18,12 +18,40 @@
       margin: 7rem 5rem;
       cursor: pointer;
 
+      @media (hover: none) {
+        &::after {
+          @include respond(tab-port) {
+            content: "+info";
+            position: absolute;
+            top: 85%;
+            left: 42%;
+            font-size: 2rem;
+            color: $color-secondary-transparent;
+            border-radius: 50%;
+          }
+
+          @include respond(tab-port) {
+            top: 55%;
+            left: 35%;
+          }
+        }
+      }
+
+      @include respond(phone) {
+        margin: 3rem 2rem;
+      }
+
       &::before {
         position: absolute;
         right: 20rem;
         top: -6rem;
         font-size: 3.5rem;
         width: fit-content;
+
+        @include respond(phone) {
+          font-size: 2.3rem;
+          right: 5rem;
+        }
       }
 
       &:hover {
@@ -53,11 +81,19 @@
         @include respond(tab-port) {
           width: 30rem;
         }
+
+        @include respond(phone) {
+          width: 15rem;
+        }
       }
 
-      @include respond(tab-port) {
-        &.queso {
+      &.queso {
+        @include respond(tab-port) {
           margin-left: 93px;
+        }
+
+        @include respond(phone) {
+          margin-left: 2.4rem;
         }
       }
 

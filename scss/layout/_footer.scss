@@ -9,6 +9,11 @@
 
   p {
     font-size: $default-font-size;
+
+
+    @include respond(tab-port) {
+      font-size: 1.8rem;
+    }
   }
 
   &__content {
@@ -23,31 +28,16 @@
         margin: 2rem 0 0 3rem;
       }
 
-      @include respond(xs) {
-        width: 28%;
-        text-align: left;
-      }
+      @include respond(tab-port) {
+        width: 27%;
+      } 
 
-      @include respond(xxs) {
-        p {
-          //   font-size: $tiny !important;
-
-          &.tiny-text {
-            font-size: 1.5rem !important;
-          }
-        }
-      }
-
-      @include respond(xxxs) {
-        width: 50%;
+      @include respond(phone) {
+        width: 90%;
 
         p {
           margin-top: 5rem;
-          font-size: $small !important;
           text-align: center;
-          &.tiny-text {
-            font-size: 2rem !important;
-          }
         }
       }
     }
@@ -60,40 +50,40 @@
         width: 100%;
       }
 
-      @include respond(xxxs) {
-        width: 50%;
-        margin-top: 5rem;
+      @include respond(phone) {
+        width: 70%;
+        margin: 5rem 0;
       }
     }
 
     &--social {
+
+      @include respond(tab-port) {
+        margin-bottom: 3rem;
+      }
+      
       & > div {
         margin-top: 2.5rem;
         display: flex;
         align-items: center;
+
+        @include respond(tab-port) {
+          margin-top: 1rem;
+        }
 
         & > svg {
           width: 10rem;
           fill: $color-primary-dark;
           height: 4rem;
 
-          @include respond(xxs) {
+          @include respond(tab-port) {
             width: 6rem;
-          }
-
-          @include respond(xxxs) {
-            width: 10rem;
-            height: 6rem;
           }
         }
 
-        @include respond(xxxs) {
+        @include respond(phone) {
           &:first-of-type {
             margin-top: 0;
-          }
-
-          p {
-            font-size: 3rem !important;
           }
         }
       }
@@ -102,6 +92,13 @@
       .mail,
       .facebook, 
       .instagram {
+
+        & a{
+          text-decoration: none;
+          color: $color-white;
+          border-bottom: 0.5px dotted rgba(255, 255, 255, 0.26);
+        }
+
         & svg {
           transition: all 0.5s;
         }
@@ -128,9 +125,10 @@
           fill: #833AB4;
         }
       }
+
     }
 
-    @include respond(xxxs) {
+    @include respond(phone) {
       flex-direction: column;
     }
   }
@@ -151,7 +149,7 @@
       background-color: $color-primary-dark;
     }
 
-    @include respond(xxxs) {
+    @include respond(phone) {
       font-size: 2rem;
     }
   }

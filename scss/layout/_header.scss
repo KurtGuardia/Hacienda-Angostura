@@ -9,15 +9,15 @@ header {
     align-items: center;
     filter: brightness(80%);
 
-    @include respond(tab-port){
+    @include respond(tab-port) {
       height: 75vh;
     }
-    
-    .sunrise{
+
+    .sunrise {
       background-color: rgb(255, 187, 0);
       height: 100vh;
       width: 100%;
-      z-index: 2;      
+      z-index: 2;
       opacity: 25%;
     }
 
@@ -33,10 +33,9 @@ header {
         width: 100%;
         height: 100vh;
 
-
-      @include respond(tab-port){
-        height: 75vh;
-      }
+        @include respond(tab-port) {
+          height: 75vh;
+        }
       }
 
       &.sun {
@@ -44,6 +43,11 @@ header {
         top: -50px;
         img {
           height: 80%;
+        }
+
+        @include respond(tab-port) {
+          left: -50px;
+          top: 250px;
         }
       }
 
@@ -86,6 +90,10 @@ header {
       animation-name: moveInBottom;
       animation-duration: 1.5s;
       animation-timing-function: ease;
+
+      @include respond(phone) {
+        margin-top: 0 !important;
+      }
     }
   }
 }

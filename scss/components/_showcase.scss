@@ -1,5 +1,8 @@
 #section-imgs{
-
+  
+  @include respond(phone) {
+    display: none;
+  }
 
 .showcase {
   list-style: none;

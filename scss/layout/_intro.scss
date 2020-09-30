@@ -5,6 +5,10 @@
     padding: 8rem;
   }
 
+  @include respond(phone) {
+    padding: 4rem;
+  }
+
   h1 {
     padding-bottom: 5rem;
     font-size: 2.5rem;
@@ -14,10 +18,13 @@
   .with-img {
     display: flex;
 
+    @include respond(tab-port) {
+      align-items: center;
+    }
 
-  @include respond(tab-port){
-   align-items: center; 
-  }
+    @include respond(phone) {
+      flex-direction: column-reverse;            
+    }
 
     .text {
       padding-right: 10rem;
@@ -25,6 +32,12 @@
       display: flex;
       flex-direction: column;
       align-items: center;
+
+      @include respond(phone) {
+        width: 80vw;
+        padding-right: 0;
+        text-align: justify;
+      }
 
       p {
         font-size: $default-font-size;
@@ -36,11 +49,21 @@
 
       .btn {
         margin-top: 5rem;
+
+        @include respond(phone) {
+          margin-top: 0;
+          margin-bottom: 5rem;
+        }
       }
     }
 
     .img {
       width: 35rem;
+
+      @include respond(phone) {
+        width: 25rem;
+        margin: 10rem 0 5rem;
+      }
 
       .intro-img {
         width: 100%;

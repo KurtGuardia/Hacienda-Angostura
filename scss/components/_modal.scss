@@ -28,18 +28,16 @@ footer {
       position: relative;
       border-radius: 8px;
 
-      @include respond(xs) {
-        flex-direction: column;
-        height: 60%;
+      @include respond(tab-land) {
         width: 80%;
       }
 
-      @include respond(xxxs) {
-        height: 80%;
+      @include respond(phone) {
+        width: 95%;
       }
 
-      @include respond(xxxxs) {
-        height: 65%;
+      & picture img{
+        width: 100%;
       }
     }
 
@@ -55,6 +53,24 @@ footer {
       border-radius: 50%;
       cursor: pointer;
 
+      @include respond(tab-land) {
+        top: 19rem;
+        right: 4rem;
+        font-size: xx-large;
+      }
+
+      @include respond(tab-port) {
+        top: 19rem;
+        right: 4rem;
+        font-size: xx-large;
+      }
+
+      @include respond(phone) {
+        font-size: large;
+        top: 15rem;
+        right: 1rem;
+        padding: 0 1rem;
+      }
     }
   }
 }
