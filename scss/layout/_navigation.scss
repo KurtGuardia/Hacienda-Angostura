@@ -17,11 +17,6 @@
     cursor: pointer;
 
     @include respond(tab-port) {
-      top: 4rem;
-      right: 4rem;
-    }
-
-    @include respond(tab-port) {
       top: 3.5rem;
       right: 3.5rem;
     }
@@ -40,11 +35,6 @@
     );
     z-index: 1000;
     transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
-
-    @include respond(tab-port) {
-      top: 4.5rem;
-      right: 4.5rem;
-    }
 
     @include respond(tab-port) {
       top: 4rem;
@@ -100,6 +90,11 @@
       span {
         margin-right: 1.5rem;
         display: inline-block;
+      }
+
+
+      @include respond(phone) {
+        font-size: 1.8rem;
       }
     }
 
