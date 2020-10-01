@@ -849,6 +849,9 @@ footer .modal-bg {
     height: 70%;
     position: relative;
     border-radius: 8px; }
+    @media only screen and (min-width: 112.5em) {
+      footer .modal-bg .modal {
+        width: 50%; } }
     @media only screen and (max-width: 75em) {
       footer .modal-bg .modal {
         width: 80%; } }
@@ -952,3 +955,82 @@ footer .modal-bg {
       transform: translateY(-4rem); }
     .section-form .book .form textarea::placeholder {
       color: #666; }
+
+.success {
+  background-image: linear-gradient(to right bottom, #1084f0, #0750af);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; }
+  .success .container {
+    display: flex;
+    width: 80%;
+    margin: 0 20rem; }
+    .success .container picture {
+      width: 40%; }
+      .success .container picture img {
+        width: 100%; }
+    .success .container-text {
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: rgba(255, 255, 255, 0.53);
+      width: 60%; }
+      .success .container-text p {
+        margin-top: 3rem;
+        font-size: 1.6rem;
+        width: 80%; }
+      .success .container-text .social {
+        display: flex;
+        justify-content: center;
+        align-self: center;
+        width: 80%; }
+        .success .container-text .social div {
+          margin: 3rem 0; }
+          .success .container-text .social div a {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-decoration: none;
+            color: #B82036; }
+          .success .container-text .social div a p {
+            width: auto;
+            margin: 0 3rem; }
+        .success .container-text .social .instagram svg {
+          fill: #833ab4;
+          width: 10rem;
+          height: 4rem; }
+          @media only screen and (max-width: 56.25em) {
+            .success .container-text .social .instagram svg {
+              width: 6rem; } }
+        .success .container-text .social .facebook svg {
+          fill: #3b5998;
+          width: 10rem;
+          height: 4rem; }
+          @media only screen and (max-width: 56.25em) {
+            .success .container-text .social .facebook svg {
+              width: 6rem; } }
+      .success .container-text div {
+        align-self: flex-start;
+        display: flex;
+        align-items: center; }
+        .success .container-text div.mobile, .success .container-text div.mail, .success .container-text div.back {
+          margin: 0 0 1rem 3rem; }
+        .success .container-text div svg {
+          width: 5rem;
+          height: 2.5rem; }
+          @media only screen and (max-width: 56.25em) {
+            .success .container-text div svg {
+              width: 6rem; } }
+        .success .container-text div p {
+          margin: 0; }
+        .success .container-text div.back a {
+          display: flex;
+          align-items: center;
+          text-decoration: none;
+          width: max-content; }
+          .success .container-text div.back a svg {
+            height: 4rem; }
+          .success .container-text div.back a p {
+            color: #333; }
