@@ -90,7 +90,7 @@
       </h1>
     </header>
 
-    <body>
+    <main>
       <section id="intro">
         <div class="with-img">
           <div class="text">
@@ -581,7 +581,7 @@
           </div>
         </div>
       </section>
-    </body>
+    </main>
 
     <footer class="footer">
       <div class="footer__content">
@@ -647,7 +647,10 @@
         <p>
           Copyright &copy; 2020
 
-          <a href="https://www.phi-desarrollo.com/" rel="noreferrer" target="_blank"
+          <a
+            href="https://www.phi-desarrollo.com/"
+            rel="noreferrer"
+            target="_blank"
             >Phi - Diseño y Desarrollo Web</a
           >
           Todos los derechos reservados.
@@ -681,94 +684,94 @@
 
     <script>
       //DOM STUFF
-      let parallax = document.getElementById("parallax");
-      let sky = document.getElementById("sky");
-      let sun = document.getElementById("sun");
-      let hill = document.getElementById("hill");
-      let main = document.getElementById("main");
-      let logo = document.getElementById("logo");
-      let sunrise = document.getElementById("sunrise");
-      let firstTitle = document.getElementById("first-title");
-      let year = document.getElementById("year");
-      let facts = document.querySelectorAll(".fact__title");
-      let modals = document.querySelectorAll(".modalBtn");
-      let sourceWebp = document.getElementById("srcWp");
-      let sourceJpg = document.getElementById("srcJg");
-      let srcImg = document.getElementById("src");
-      let modalBg = document.querySelector(".modal-bg");
-      let modalClose = document.querySelector(".modal-close");
-      let links = document.querySelectorAll(".navigation__link");
-      const ham = document.querySelector(".navigation__checkbox");
+      let parallax = document.getElementById('parallax');
+      let sky = document.getElementById('sky');
+      let sun = document.getElementById('sun');
+      let hill = document.getElementById('hill');
+      let main = document.getElementById('main');
+      let logo = document.getElementById('logo');
+      let sunrise = document.getElementById('sunrise');
+      let firstTitle = document.getElementById('first-title');
+      let year = document.getElementById('year');
+      let facts = document.querySelectorAll('.fact__title');
+      let modals = document.querySelectorAll('.modalBtn');
+      let sourceWebp = document.getElementById('srcWp');
+      let sourceJpg = document.getElementById('srcJg');
+      let srcImg = document.getElementById('src');
+      let modalBg = document.querySelector('.modal-bg');
+      let modalClose = document.querySelector('.modal-close');
+      let links = document.querySelectorAll('.navigation__link');
+      const ham = document.querySelector('.navigation__checkbox');
 
       //RESPONSIVE JAVASCRIPT FOR TABLETS TO PHONES
-      var width = window.matchMedia("(max-width: 900px)");
+      var width = window.matchMedia('(max-width: 900px)');
 
       //GETTING AHEAD WITH THE FIRST TITLE
       if (width.matches) {
-        firstTitle.classList.add("move-in");
+        firstTitle.classList.add('move-in');
       }
 
       //EVENT LISTENERS
 
-      window.addEventListener("scroll", function () {
+      window.addEventListener('scroll', function () {
         var value = window.scrollY;
 
-        parallax.style.filter = "brightness(" + (80 + value / 13.33) + "%)";
-        sun.style.left = -250 + value * 2 + "px";
-        sun.style.top = -50 - value * 1.3 + "px";
-        hill.style.top = 200 - value * 0.3 + "px";
-        logo.style.top = 25 + value * 0.1 + "%";
-        main.style.top = 100 - value * 0.1 + "px";
-        sunrise.style.opacity = 25 - value / 13.33 + "%";
+        parallax.style.filter = 'brightness(' + (80 + value / 13.33) + '%)';
+        sun.style.left = -250 + value * 2 + 'px';
+        sun.style.top = -50 - value * 1.3 + 'px';
+        hill.style.top = 200 - value * 0.3 + 'px';
+        logo.style.top = 25 + value * 0.1 + '%';
+        main.style.top = 100 - value * 0.1 + 'px';
+        sunrise.style.opacity = 25 - value / 13.33 + '%';
 
         if (width.matches) {
-          sun.style.left = -50 + value * 2 + "px";
-          sun.style.top = 250 - value * 1.3 + "px";
-          logo.style.top = 25 + value * 0.2 + "%";
+          sun.style.left = -50 + value * 2 + 'px';
+          sun.style.top = 250 - value * 1.3 + 'px';
+          logo.style.top = 25 + value * 0.2 + '%';
         }
 
         if (value >= 350) {
-          firstTitle.classList.add("move-in");
+          firstTitle.classList.add('move-in');
         }
       });
 
       links.forEach((link) => {
-        link.addEventListener("click", () => {
+        link.addEventListener('click', () => {
           ham.checked = false;
         });
       });
 
       facts.forEach((el) =>
-        el.addEventListener("click", function () {
+        el.addEventListener('click', function () {
           const sibling = this.nextElementSibling;
-          sibling.classList.toggle("active");
-          el.classList.toggle("active");
+          sibling.classList.toggle('active');
+          el.classList.toggle('active');
         })
       );
 
       let product;
       modals.forEach((e) =>
-        e.addEventListener("click", function () {
-          if (e.classList.contains("queso")) {
-            product = "queso";
-          } else if (e.classList.contains("leche")) {
-            product = "leche";
-          } else if (e.classList.contains("mantequilla")) {
-            product = "mantequilla";
-          } else if (e.classList.contains("requeson")) {
-            product = "requeson";
-          } else if (e.classList.contains("nata")) {
-            product = "nata";
+        e.addEventListener('click', function () {
+          if (e.classList.contains('queso')) {
+            product = 'queso';
+          } else if (e.classList.contains('leche')) {
+            product = 'leche';
+          } else if (e.classList.contains('mantequilla')) {
+            product = 'mantequilla';
+          } else if (e.classList.contains('requeson')) {
+            product = 'requeson';
+          } else if (e.classList.contains('nata')) {
+            product = 'nata';
           }
-          modalBg.classList.add("bg-active");
+          modalBg.classList.add('bg-active');
           sourceWebp.srcset = `./imgs/${product}-prod.webp`;
           sourceJpg.srcset = `./imgs/${product}-prod.jpg`;
           srcImg.src = `./imgs/${product}-prod.jpg`;
         })
       );
 
-      modalClose.addEventListener("click", function () {
-        modalBg.classList.remove("bg-active");
+      modalClose.addEventListener('click', function () {
+        modalBg.classList.remove('bg-active');
       });
 
       //Functions

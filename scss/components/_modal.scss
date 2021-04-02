@@ -40,40 +40,40 @@ footer {
         width: 95%;
       }
 
-      & picture img{
+      & picture img {
         width: 100%;
       }
-    }
 
-    .modal-close {
-      color: $color-primary;
-      position: absolute;
-      top: 3rem;
-      right: 30rem;
-      padding: 0 2rem;
-      font-weight: bold;
-      font-size: xxx-large;
-      background-color: $color-secondary-transparent;
-      border-radius: 50%;
-      cursor: pointer;
+      &-close {
+        color: $color-primary;
+        position: absolute;
+        top: 3rem;
+        right: 30rem;
+        padding: 0 2rem;
+        font-weight: bold;
+        font-size: xxx-large;
+        background-color: $color-secondary-transparent;
+        border-radius: 50%;
+        cursor: pointer;
 
-      @include respond(tab-land) {
-        top: 19rem;
-        right: 4rem;
-        font-size: xx-large;
-      }
+        @include respond(tab-land) {
+          top: 19rem;
+          right: 4rem;
+          font-size: xx-large;
+        }
 
-      @include respond(tab-port) {
-        top: 19rem;
-        right: 4rem;
-        font-size: xx-large;
-      }
+        @include respond(tab-port) {
+          top: 19rem;
+          right: 4rem;
+          font-size: xx-large;
+        }
 
-      @include respond(phone) {
-        font-size: large;
-        top: 15rem;
-        right: 1rem;
-        padding: 0 1rem;
+        @include respond(phone) {
+          font-size: large;
+          top: 15rem;
+          right: 1rem;
+          padding: 0 1rem;
+        }
       }
     }
   }
