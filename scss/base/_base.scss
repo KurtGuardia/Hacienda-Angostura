@@ -28,8 +28,8 @@ html {
 
 body {
   box-sizing: border-box;
-  
-  & > *:not(header){
+
+  & > *:not(header) {
     padding: 3rem;
   }
 
@@ -41,4 +41,17 @@ body {
 ::selection {
   background-color: $color-primary;
   color: $color-white;
+}
+
+::-webkit-scrollbar {
+  width: 2rem;
+}
+
+::-webkit-scrollbar-track {
+  background: $color-grey-light-2;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $color-primary;
+  border-radius: 10px;
 }
